@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+
+  exel:
+    build: ./
+    container_name: exel_mysql
+    ports:
+      - "8000:80"

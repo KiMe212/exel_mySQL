@@ -1,0 +1,15 @@
+FROM python:3.10-slim
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1
+
+WORKDIR .
+
+RUN apt update && pip install --upgrade pip
+
+COPY . .
+
+RUN pip install -r requirements.txt
+
+#должен быть в дериктории где main.py
+CMD ["python3", "main.py"]
