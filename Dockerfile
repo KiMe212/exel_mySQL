@@ -11,5 +11,4 @@ COPY . .
 
 RUN pip install -r requirements.txt
 
-#должен быть в дериктории где main.py
 CMD ["python3", "main.py"]
